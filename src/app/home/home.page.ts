@@ -8,14 +8,16 @@ import { BarcodeScanner } from '@awesome-cordova-plugins/barcode-scanner/ngx';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-data: any;
+data=[];
+pruebas=[];
   constructor(private barcodeScanner: BarcodeScanner ) {}
 scan(){
   this.barcodeScanner.scan().then(barcodeData => {
     console.log('Barcode data', barcodeData);
-    this.data=barcodeData.text
+    this.data.push(barcodeData.text)
    }).catch(err => {
        console.log('Error', err);
    });
 }
+
 }

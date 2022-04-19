@@ -20,5 +20,8 @@
   <ion-Button (click)="scan()">
     Escaner
   </ion-Button>
-  {{data}}
+
+<div *ngFor="let datas of data;">
+  {{datas}}
+</div>
 </ion-content>
