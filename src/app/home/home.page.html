@@ -13,15 +13,14 @@
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
   <ion-Button (click)="scan()">
     Escaner
   </ion-Button>
+  <ion-Button (click)="enviar()">
+    Enviar
+  </ion-Button>
 
-<div *ngFor="let datas of data;">
-  {{datas}}
+<div *ngFor="let asistencia of Asitencias;">
+  {{asistencia}}
 </div>
 </ion-content>
