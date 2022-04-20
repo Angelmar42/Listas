@@ -21,13 +21,13 @@ export class HomePage {
   preparado=[];
   constructor(private barcodeScanner: BarcodeScanner, private emailComposer: EmailComposer ) {}
 scan(){
-  while (true){
+
   this.barcodeScanner.scan().then(barcodeData => {
     console.log('Barcode data', barcodeData);
     this.Asitencias.push(barcodeData.text)
    }).catch(err => {
        console.log('Error', err);
-   });}
+   });
 }
 
 
