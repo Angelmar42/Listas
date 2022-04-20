@@ -32,8 +32,8 @@ scan(){
 
 
 enviar(){
-  this.asistentes();
-  this.cuerpo=this.preparado;
+  this.Asitencias.sort();
+  this.cuerpo=this.Asitencias;
   this.emailComposer.getClients().then((apps: []) => {
     // Returns an array of configured email clients for the device
  });
@@ -72,15 +72,6 @@ enviar(){
 }
 
 
-asistentes(){
-  for (let entry of this.lista) {
-  let  presente = this.Asitencias.includes(this.lista[entry]);
-  if (presente==true){
-  this.preparado.push(this.lista[entry]+" "+ 1)
-  }
-  else{
-    this.preparado.push(this.lista[entry]+ " "+0)}
-}
-}
+
 
 }
